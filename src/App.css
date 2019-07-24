@@ -1,33 +1,79 @@
-.App {
-  text-align: center;
+h1 {
+	display: inline-block;
+	font-family: trajan;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+ul {
+	list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+	padding: 4px;
+}
+.loginForm {
+	float: left;
+	border-style: solid;
+	padding: 3%;
+	margin-left: 10%;
 }
 
-.App-link {
-  color: #61dafb;
+.commentContainer {
+	position: fixed;
+	bottom: 0;
+	left: 70%;
+	border-style: solid;
+	height: 200px;
+	width: 400px;
+	overflow: auto;
+	background-color: linen;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.signupForm {
+	float: right;
+	border-style: solid;
+	padding: 3%;
+	margin-right: 10%;
+}
+
+.profile {
+	height: 100%;
+	width: 30%;
+	background-color: coral;
+	text-align: center;
+	border-style: solid;
+	margin-top: 10%;
+	margin-left: 35%;
+}
+
+.storyShow {
+	width: 30%;
+	height: 800px;
+	background-color: linen;
+	overflow: auto;
+	margin-left: 30%;
+	float: left;
+}
+
+.grandMap {
+	float: right;
+	margin-right: 30%;
+}
+
+.storyMap {
+	float: left;
+	margin-left: -60%;
+}
+
+.navBar {
+	overflow: hidden;
+    white-space: nowrap;
+    background-color: lightblue;
+}
+
+#inAs {
+	color: blue;
+}
+
+.navBar {
+	padding: 1%;
 }
