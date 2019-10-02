@@ -18,7 +18,8 @@ handleOnSubmit = (e) => {
 		user_id: this.props.user.id,
 		user_name: this.props.user.username,
 		story_id: this.props.story.id,
-		content: this.state.comment
+		content: this.state.comment,
+		image: this.props.user.avatar
 	}
 	fetch('http://localhost:3000/api/v1/comments', {
      method: "POST",
@@ -39,7 +40,6 @@ componentDidMount() {
 	fetch('http://localhost:3000/api/v1/comments')
 		.then(resp => resp.json())
 		.then(commentList => {
-			console.log(commentList)
 			this.setState({ myComments: commentList })
 		})
 }
@@ -48,8 +48,14 @@ showComments = () => {
 	if(this.state.myComments.length > 0) {
 	let theseComments = this.state.myComments.filter(comment => comment.story_id === this.props.story.id );
 	return theseComments.map((comment, index) => {
-	return <li key={index}> {comment.user_name} said: {comment.content} 
-					<button data-user={comment.user_id} id={comment.id} onClick={this.delComment}>X</button> </li>  
+	return <li key={index}> 
+<img src={require(`${comment.image}`)} className="avatarPic" alt="pic" width="20" height="30" />
+	{comment.user_name} said: {comment.content} 
+					<button
+					className="deleteBtn"
+					data-user={comment.user_id} 
+					id={comment.id} 
+					onClick={this.delComment}>X</button> </li>  
 		})
 	}
 }

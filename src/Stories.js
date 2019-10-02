@@ -6,16 +6,18 @@ class Stories extends React.Component {
 render() {
 
 const showStories = () => {
-	return this.props.stories.map(story => <Link key={story.id} to={`/stories/${story.id}`}> {story.author} - {story.title} </Link> )
+	return this.props.stories.map(story => <li key={story.id}> <Link to={`/stories/${story.id}`}> {story.author} - {story.title} </Link> </li> )
 }
 
 
 	return (
-		<div className="Stories">
-<h2> ---=== Stories, Myths, Etc. ===--- </h2>
+		<div className="stories">
+<div className="storyList">
+<h1> Stories and Poems </h1>
 <ul>
 {showStories()}
 </ul>
+</div>
 		</div>
 		)
 

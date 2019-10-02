@@ -4,7 +4,8 @@ class Signup extends React.Component {
 
 state = {
 	username: '',
-	password: ''
+	password: '',
+  location: ''
 }
 
 handleOnChange = (e) => {
@@ -14,7 +15,7 @@ handleOnChange = (e) => {
 handleSubmit = (e) => {
   e.preventDefault()
   this.props.signUp(this.state)
-  this.setState({ username: '', password: '' })
+  this.setState({ username: '', password: '', location: '' })
 }
 
 render() {
@@ -31,7 +32,7 @@ render() {
             required/><br />
          <label>password:</label>
           <input
-            type="text"
+            type="password"
             value={this.state.password}
             name="password"
             onChange={this.handleOnChange} 

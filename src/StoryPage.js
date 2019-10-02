@@ -60,10 +60,7 @@ const handleOnClick = () => {
 	}
 }
 
-const zeusy = <a href={"www.google.com"}>Zeus</a>
-const showSubbedContent = this.props.story.content.split("Zeus").join(zeusy)
-console.log(this.props.story.content)
-console.log(this.props.story.content.split("Zeus"))
+
 // .map(text => {
 	// return <a href={'www.google.com'}>{text}</a>
 // })
@@ -74,21 +71,23 @@ console.log(this.props.story.content.split("Zeus"))
 //   return <div className='textItem'>{t}</div>;
 // });
 
-
-
-const doYouLikeMe = () => {
-	if(this.state.liked === true ) { return 'You Like This Story!' } else { return null }
+let buttonStyle = {
+	backgroundColor: 'white'
 }
+
+if(this.state.liked) {buttonStyle = {backgroundColor:'red'} }
 
 	return (
 		<div className="storyShow">
-<h1> {this.props.story.title} </h1>
-<h3> {this.state.likes} people like this </h3>
-<h2> by {this.props.story.author} </h2><br />
-{doYouLikeMe()}
+<h2> {this.props.story.title} </h2>
+<h3> by {this.props.story.author} </h3>
+<strong> {this.state.likes}</strong> {this.state.likes === 1 ? <span> person likes this </span> : 
+	<span> people like this </span> } <br />
 <button 
-	onClick={handleOnClick}> {this.state.liked ? 'un-like this story' : 'like this story' }</button><br />
- {showSubbedContent}
+	onClick={handleOnClick}
+	style={buttonStyle}> {this.state.liked ? 'un-like this story' : 'like this story' }</button><br />
+{this.props.story.content}
+
 		</div>
 		)
 

@@ -8,6 +8,7 @@
     "google-map-react": "^1.1.4",
     "google-maps-react": "^2.0.2",
     "react": "^16.8.6",
+    "react-d3-graph": "^2.1.0",
     "react-dom": "^16.8.6",
     "react-google-maps": "^9.4.5",
     "react-redux": "^7.1.0",

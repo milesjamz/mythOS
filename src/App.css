@@ -1,5 +1,19 @@
+html {
+	font-family: trajan;
+}
+
 h1 {
 	display: inline-block;
+	font-family: trajan;
+	text-decoration: underline overline;
+	color: #2175d8;
+}
+
+h2 {
+	font-family: trajan;
+}
+
+h3 {
 	font-family: trajan;
 }
 
@@ -7,32 +21,194 @@ ul {
 	list-style-type: none;
 }
 
-a {
-	padding: 4px;
+button {
+	border: none;
+	color:blue;
 }
+
+a {
+	color: #e34234;
+}
+
+a:hover {
+	color: #2175d8;
+}
+
+textarea {
+	resize: none;
+}
+
+/*.columnPic {
+	opacity: .7;
+}
+
+.columnPic:hover {
+	opacity: 1;
+}*/
+
+.landingPage {
+	background-image: url("./images/ruinedtemple.png");
+	height: 960px;
+	background-repeat: no-repeat;
+	background-color: #7DCEC7;
+	background-position: 100% 0%;
+	/*margin-top: -.2%;*/
+}
+
+.deleteBtn {
+	opacity: 0;
+}
+
+.deleteBtn:hover {
+	opacity: 1;
+}
+
+.landingText {
+	color: white;
+	text-align: center;
+	background-color: teal;
+	width: 40%;
+	margin-left: 30%;
+	margin-top: 05%;
+	position: fixed;
+}
+
+.favGodQuestions {
+	text-align: right;
+	padding: 10px;
+	padding-right: 50px;
+	margin-left: 25%;
+	margin-top: 10%;
+	border-style: solid;
+	box-shadow: 5px 10px;
+	width: 40%;
+	background-color: linen;
+	/*border-image: url('./images/meander.jpg') 250 round;*/
+}
+/*url('./images/marblebkg.jpg');*/
+.kewlGraph {
+	float: left;
+	/*position: fixed;*/
+	/*margin-top:8%;*/
+	margin-left: -35%;
+	width: 100%;
+	/*height: 100%;*/
+}
+
+.godPic {
+	float:left;
+	margin: 40px;
+	border-style: solid;
+	border-color: #2175d8;
+	height: 30%;
+	width: 30%;
+}
+
+.locPic {
+	float:left;
+	margin: 40px;
+	border-style: solid;
+	border-color: #2175d8;
+	height:500px;
+	width:400px;
+	margin-top:6%;
+	margin-left:10%;
+}
+
+.detailsComponent {
+	background-color: salmon;
+	float: right;
+	margin-right: 100%;
+	width: 30%;
+	display: inline-block;
+	position: fixed;
+}
+
+.locationDetail {
+	background-color: linen;
+	padding: 10px;
+	overflow: auto;
+	height: 60%;
+	width: 28%;
+	position: fixed;
+	margin-left:4%;
+	padding-right: 2%;
+	margin-top:3%;
+	border-style: solid;
+	border-color: #2175d8;
+}
+
+.godDetail {
+	background-color: linen;
+	padding: 10px;
+	overflow: auto;
+	height: 60%;
+	width: 28%;
+	margin-left:4%;
+	margin-top:3%;
+	position: fixed;
+	border-style: solid;
+	border-color: #2175d8;
+	text-align: right;
+	padding-right: 2%;
+}
+
+
 .loginForm {
+	margin-top:10%;
 	float: left;
 	border-style: solid;
 	padding: 3%;
-	margin-left: 10%;
+	margin-left: 25%;
+	box-shadow: 5px 10px;
 }
 
 .commentContainer {
 	position: fixed;
 	bottom: 0;
+	/*margin-bottom: -23%;*/
 	left: 70%;
 	border-style: solid;
-	height: 200px;
+	border-color: #2175d8;
+	height: 150px;
 	width: 400px;
 	overflow: auto;
 	background-color: linen;
 }
 
 .signupForm {
+	margin-top:10%;
 	float: right;
 	border-style: solid;
 	padding: 3%;
-	margin-right: 10%;
+	margin-right: 25%;
+	box-shadow: 5px 10px;
+}
+
+.journeys {
+	text-align: center;
+	background-image: url('./images/marblebkg.jpg');
+	height:1000px;
+	width: 1800px;
+	padding-right: 10%;
+}
+.journeyMap {
+	float: right;
+	/*margin-right: -190%;*/
+	margin-top: 5%;
+	height:705px;
+	width:600px;
+	border-style: solid;
+	border-color: #2175d8;
+}
+
+.journeyText {
+	float:left;
+	margin-left: 20%;
+	border-style: solid;
+	border-color: #2175d8;
+	margin-top:10%;
+	background-color:linen;
 }
 
 .profile {
@@ -43,37 +219,147 @@ a {
 	border-style: solid;
 	margin-top: 10%;
 	margin-left: 35%;
+	overflow: auto;
 }
 
 .storyShow {
+	padding:.5%;
+	margin-top:1%;
 	width: 30%;
 	height: 800px;
 	background-color: linen;
 	overflow: auto;
-	margin-left: 30%;
+	margin-left:30%;
 	float: left;
+	border-style: solid;
+	border-color: #2175d8;
+}
+
+.storyList {
+	overflow: auto;
+	text-align: center;
+	background-color: linen;
+	margin-left:35%;
+	width: 30%;
+	border-style: solid;
+	border-color: #2175d8;
+	padding:1%;
+}
+
+.storyContainer {
+	height: 1000px;
+	width: 2000px;
+	background-image: url('./images/marblebkg.jpg');
+}
+
+.locationShow {
+	height: 1000px;
+	width: 2000px;
+	background-image: url('./images/marblebkg.jpg');
+}
+
+.locationDeets {
+	margin-right:10%;
+	margin-top: 5%;
+	text-align: center;
+	background-color: linen;
+	width: 55%;
+	float:right;
+	border-style: solid;
+	border-color: #2175d8;
+	overflow:auto;
+}
+
+.godShow {
+	text-align: right;
+	padding-right: 10%;
+	height: 1000px;
+	width: 1800px;
+	background-image: url('./images/marblebkg.jpg');
+}
+
+.godDeets {
+	margin-top: 5%;
+	text-align: center;
+	background-color: linen;
+	width: 18%;
+	float:right;
+	border-style: solid;
+	border-color: #2175d8;
+}
+
+.godsPage {
+	text-align: center;
+	background-image: url('./images/marblebkg.jpg');
+	height:1000px;
+	width: 1800px;
+	padding-right: 10%;
+}
+
+.heroes {
+	padding:1%;
+	background-color:linen;
+	border-style: solid;
+	border-color: #2175d8;
+	overflow: auto;
+	height:450px;
+	width:450px;
+	margin-left:35%;
+	width: 30%;
+}
+
+.stories {
+	text-align: center;
+	padding-right: 10%;
+	height: 1000px;
+	width: 1800px;
+	background-image: url('./images/marblebkg.jpg');
+}
+
+.locations {
+	float: left;
+	padding-left: 10px;
 }
 
 .grandMap {
-	float: right;
-	margin-right: 30%;
+	float: all;
+	width: 2000px;
+	height: 1000px;
 }
 
 .storyMap {
 	float: left;
-	margin-left: -60%;
+	margin-left: -59%;
+	margin-top: 1%;
+	height: 650px;
+	width: 500px;
+	border-style: solid;
+	border-color: #2175d8;
 }
 
 .navBar {
-	overflow: hidden;
-    white-space: nowrap;
-    background-color: lightblue;
+    background-color: #2175d8;
+    text-align: center;
+    color: green;
+	padding: 4px;
+}
+
+.navBar h1{
+	color: white;
+	padding-right: 50px;
+}
+
+.navBar a{
+	opacity: .7;
+	color: white;
+	padding: 5px;
+}
+
+.navBar a:hover{
+	color:cyan;
+	opacity:1;
 }
 
 #inAs {
-	color: blue;
-}
-
-.navBar {
-	padding: 1%;
+	color: white;
 }

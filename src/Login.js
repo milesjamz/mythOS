@@ -31,7 +31,7 @@ render() {
             required /><br />
      		 <label>password:</label>
      		 	<input
-     		 		type="text"
+     		 		type="password"
             value={this.state.password}
             name="password"
             onChange={this.handleOnChange} 
