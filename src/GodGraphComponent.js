@@ -82,7 +82,6 @@ const onClickGraph = function() {
 };
  
 const onClickNode = function(nodeId) {
-    // console.log(nodeId)
     // window.alert(`Clicked node ${nodeId}`);
 };
  
@@ -117,8 +116,6 @@ const onMouseOverLink = function(source, target) {
 const onMouseOutLink = function(source, target) {
     // window.alert(`Mouse out link between ${source} and ${target}`);
 };
-
-// console.log(this.props.nodes.siblings)
 
 return( 
 <div className="kewlGraph">

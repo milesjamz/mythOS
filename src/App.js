@@ -132,6 +132,8 @@ this.setState(prevState => ({
 	)
 )}
 
+// --- finds gods, also throws easter eggs ---
+
   searchforGod = formInput => {
     let searchedGods = this.state.gods.filter(god =>
       god.name.toLowerCase().includes(formInput.toLowerCase())

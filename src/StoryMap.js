@@ -11,7 +11,6 @@ class StoryMap extends Component {
   }
 
 componentDidMount() {
-console.log(this.props)
 this.setState({ markers: this.props.story.locations }) 
 }
 
