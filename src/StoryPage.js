@@ -13,7 +13,6 @@ componentDidMount() {
 	fetch('http://localhost:3000/api/v1/likes')
 		.then(resp => resp.json())
 		.then(likeList => {
-			// console.log(likeList)
 			let myLikes = likeList.filter(like => like.story_id === this.props.story.id)
 			let isLiked = myLikes.find(like => like.user_id === this.props.user.id)
 			this.setState({ likes: myLikes.length })

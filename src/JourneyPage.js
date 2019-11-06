@@ -49,7 +49,6 @@ handleOnSubmit = (sentDescription) => {
   .then(resp => resp.json())
   .then(parsedResp => {
     this.fetchNewMe(parsedResp.user_id)
-    // console.log(parsedResp)
   })
 }
 
@@ -86,7 +85,6 @@ const styles = require('./customMapStyles.json')
       } else {
         return "You don't have a route length yet."
       }
-    // console.log(this.state.response.routes[0].legs)
   }
 }
 

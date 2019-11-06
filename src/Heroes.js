@@ -29,16 +29,13 @@ state = {
 
 
 render() {
-    // --- makes brewery LIs and puts them in the brewery render area ---
   const showGods = () => {
     const theGodsYouWant = this.props.gods.filter(god =>
       this.props.filterGods.includes(god)
     );
     return theGodsYouWant.map(god => <li key={god.id} > <Link to={`gods/${god.id}`}> {god.name} </Link> </li> )
   };
-
-// let showGods = this.props.gods.map(god => <li key={god.id} > <Link to={`gods/${god.id}`}> {god.name} </Link> </li> )
-
+  
 	return (
 	<div className="godsPage">
 		<div className="heroes">
