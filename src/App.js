@@ -33,7 +33,6 @@ componentDidMount() {
 fetch('http://localhost:3000/api/v1/stories')
 	.then(resp => resp.json())
 	.then(storyList => {
-		// console.log(storyList)
 		this.setState ({ stories: storyList})
 	})
 fetch('http://localhost:3000/api/v1/gods')
@@ -166,6 +165,8 @@ changeGodAndAvatar = (newGod) => {
        })
 }
 
+// --- gets your profile from the server ---
+
   getProfileFromServer = () => {
     if (localStorage.token) {
       fetch("http://localhost:3000/api/v1/profile", {
@@ -185,9 +186,13 @@ changeGodAndAvatar = (newGod) => {
   };
 
 
+// --- logs out the user ---
+
 logOut = () => {
 	this.setState({ current_user: '', logged_in: false })
 }
+
+// --- logs in the user ---
 
 logIn = (sentState) => {
 fetch("http://localhost:3000/api/v1/login", {
@@ -209,6 +214,8 @@ fetch("http://localhost:3000/api/v1/login", {
         }
       });
 }
+
+// --- updates the user --- 
 
 updateUser = (updatedUser) => {
 	this.setState({current_user: updatedUser})

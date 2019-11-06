@@ -11,7 +11,6 @@ componentDidMount() {
 	fetch(`http://localhost:3000/api/v1/users/${this.props.user.id}`)
 	.then(resp => resp.json())
 	.then(myUser => {
-		// console.log(myUser)
 		this.setState({ likedStories: myUser.like_story_names })
 	})
 }

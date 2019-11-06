@@ -59,17 +59,6 @@ const handleOnClick = () => {
 	}
 }
 
-
-// .map(text => {
-	// return <a href={'www.google.com'}>{text}</a>
-// })
-// <a href={'www.google.com'}>" Zeus "</a> )
-// }
-
-// const result = this.props.text.split(':').map(t => {
-//   return <div className='textItem'>{t}</div>;
-// });
-
 let buttonStyle = {
 	backgroundColor: 'white'
 }
