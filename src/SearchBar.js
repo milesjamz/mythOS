@@ -1,7 +1,6 @@
 import React from "react";
 
-class SearchBar extends React.Component {
-  render() {
+function SearchBar() {
     return (
       <div className="searchbar">
         <form onSubmit={this.props.handleSubmit}>
@@ -17,5 +16,4 @@ class SearchBar extends React.Component {
       </div>
     );
   }
-}
 export default SearchBar;

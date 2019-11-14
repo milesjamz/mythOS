@@ -1,10 +1,6 @@
 import React from 'react';
 
-class Landing extends React.Component {
-
-
-render() {
-
+function Landing() {
 	return (
 		<div className="landingPage">
 
@@ -16,7 +12,6 @@ Enjoy!🇬🇷
 </div>
 		</div>
 		)
-	}
 }
 
 export default Landing

@@ -1,32 +1,29 @@
 import React from 'react'
 import { Graph } from 'react-d3-graph';
 
-class GodGraphComponent extends React.Component {
+function GodGraphComponent() {
 
- render() {
+    const me = [{id: this.props.nodes.name.toUpperCase(), 
+        svg: require(`./images/${this.props.nodes.name.toLowerCase()}.jpg`), fontColor: 'red', size: 800 }]
 
-const me = [{id: this.props.nodes.name.toUpperCase(), 
-    svg: require(`./images/${this.props.nodes.name.toLowerCase()}.jpg`), fontColor: 'red', size: 800 }]
+    const mom = [{id: this.props.nodes.mother, size: 200, 
+        svg: require(`./images/${this.props.nodes.mother.toLowerCase()}.jpg`), fontColor: 'blue' }]
 
-const mom = [{id: this.props.nodes.mother, size: 200, 
-    svg: require(`./images/${this.props.nodes.mother.toLowerCase()}.jpg`), fontColor: 'blue' }]
+    const dad = [{id: this.props.nodes.father, size: 200, 
+        svg: require(`./images/${this.props.nodes.father.toLowerCase()}.jpg`), fontColor: 'blue' }]
 
-const dad = [{id: this.props.nodes.father, size: 200, 
-    svg: require(`./images/${this.props.nodes.father.toLowerCase()}.jpg`), fontColor: 'blue' }]
+    const siblings = this.props.nodes.siblings.map(sibling => {
+	   return {id: sibling, size: 200, svg: require(`./images/${sibling.toLowerCase()}.jpg`), fontColor: 'blue' } } ) 
 
-const siblings = this.props.nodes.siblings.map(sibling => {
-	return {id: sibling, size: 200, svg: require(`./images/${sibling.toLowerCase()}.jpg`), fontColor: 'blue' } } ) 
+    const kids = this.props.nodes.children.map(child => {
+	   return {id: child, size: 200, svg: require(`./images/${child.toLowerCase()}.jpg`), fontColor: 'blue' } } ) 
 
-const kids = this.props.nodes.children.map(child => {
-	return {id: child, size: 200, svg: require(`./images/${child.toLowerCase()}.jpg`), fontColor: 'blue' } } ) 
-
-const theFolks = { id: 'Parents', symbolType: "diamond", fontColor: 'green', collapsable: true }
-const theKids = { id: 'Children', symbolType: "diamond", fontColor: 'green'}
-const theSibs = { id: 'Siblings', symbolType: "diamond", fontColor: 'green'}
-
+    const theFolks = { id: 'Parents', symbolType: "diamond", fontColor: 'green', collapsable: true }
+        const theKids = { id: 'Children', symbolType: "diamond", fontColor: 'green'}
+            const theSibs = { id: 'Siblings', symbolType: "diamond", fontColor: 'green'}
 
 const theTree = [{ source: me[0].id, target: theSibs.id }, 
-{source: me[0].id, target: theFolks.id}, {source: me[0].id, target: theKids.id}]
+    {source: me[0].id, target: theFolks.id}, {source: me[0].id, target: theKids.id}]
 
 const sibTree = siblings.map(sibling => {
 	return {source: 'Siblings', target: sibling.id}  
@@ -40,7 +37,6 @@ const momDadTree = [ {source: 'Parents', target: mom[0].id}, {source: 'Parents',
 
 const allLinks = theTree.concat(sibTree, kidTree, momDadTree )
 const allNodes = me.concat(siblings, mom, dad, kids, theFolks, theKids, theSibs)
-
 
 // graph payload (with minimalist structure)
 const data = {
@@ -137,6 +133,5 @@ return(
 	</div>
 		)
 	}
-}
 
 export default GodGraphComponent

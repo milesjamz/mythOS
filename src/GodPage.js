@@ -2,12 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import GodGraphComponent from './GodGraphComponent'
 
-class GodPage extends React.Component {
-
-render() {
+function GodPage() {
 	let ourHero = this.props.pantheon.find(god => god.id === parseInt(this.props.match.params.godId) )
+
+return (
+	// let ourHero = this.props.pantheon.find(god => god.id === parseInt(this.props.match.params.godId) )
 // console.log(ourHero)
-	return (
+	// return (
 		<div className="godShow">
 <div className='godDeets'>
 <h1> Name: {ourHero.name} </h1>
@@ -27,9 +28,6 @@ render() {
 {ourHero ? <GodGraphComponent nodes={ourHero} /> : null }
 		</div>
 		)
-
-}
-
 
 }
 

@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-class Stories extends React.Component {
-
-render() {
+function Stories() {
 
 const showStories = () => {
 	return this.props.stories.map(story => <li key={story.id}> <Link to={`/stories/${story.id}`}> {story.author} - {story.title} </Link> </li> )
@@ -20,10 +18,6 @@ const showStories = () => {
 </div>
 		</div>
 		)
-
-}
-
-
 }
 
 export default Stories

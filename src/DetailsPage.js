@@ -1,7 +1,7 @@
 import React from 'react';
 import DetailsComponent from './DetailsComponent'
 
-class DetailsPage extends React.Component {
+function DetailsPage() {
 
 // state = {
 // 	clickedThing: ''
@@ -17,7 +17,7 @@ class DetailsPage extends React.Component {
 // 	this.setState({ clickedThing: clickedLocation })
 // }
 
-render() {
+// render() {
 
 // const showGods = () => {
 // return this.props.story.gods.map(god =>  <li key={god.id}> <button id={god.id}
@@ -38,6 +38,6 @@ render() {
 		</div>
 		)
 	}
-}
+// }
 
 export default DetailsPage
