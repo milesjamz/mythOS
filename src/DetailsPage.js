@@ -1,7 +1,7 @@
 import React from 'react';
 import DetailsComponent from './DetailsComponent'
 
-function DetailsPage() {
+function DetailsPage(props) {
 
 // state = {
 // 	clickedThing: ''
@@ -34,7 +34,7 @@ function DetailsPage() {
 
 	return (
 		<div className="detailsPage">
-<DetailsComponent clickedThing={ this.props.clickedThing } />
+<DetailsComponent clickedThing={ props.clickedThing } />
 		</div>
 		)
 	}

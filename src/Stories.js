@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-function Stories() {
+function Stories(props) {
 
 const showStories = () => {
-	return this.props.stories.map(story => <li key={story.id}> <Link to={`/stories/${story.id}`}> {story.author} - {story.title} </Link> </li> )
+	return props.stories.map(story => <li key={story.id}> <Link to={`/stories/${story.id}`}> {story.author} - {story.title} </Link> </li> )
 }
 
 

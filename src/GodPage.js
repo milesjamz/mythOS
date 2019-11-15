@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import GodGraphComponent from './GodGraphComponent'
 
-function GodPage() {
-	let ourHero = this.props.pantheon.find(god => god.id === parseInt(this.props.match.params.godId) )
+function GodPage(props) {
+	let ourHero = props.pantheon.find(god => god.id === parseInt(props.match.params.godId) )
 
 return (
 	// let ourHero = this.props.pantheon.find(god => god.id === parseInt(this.props.match.params.godId) )

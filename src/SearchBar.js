@@ -1,15 +1,15 @@
 import React from "react";
 
-function SearchBar() {
+function SearchBar(props) {
     return (
       <div className="searchbar">
-        <form onSubmit={this.props.handleSubmit}>
+        <form onSubmit={props.handleSubmit}>
           <label>
             Search by Name:
             <input
               type="text"
-              value={this.props.value}
-              onChange={this.props.handleOnChange}
+              value={props.value}
+              onChange={props.handleOnChange}
             />
           </label>
         </form>

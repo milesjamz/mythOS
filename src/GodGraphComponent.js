@@ -1,21 +1,21 @@
 import React from 'react'
 import { Graph } from 'react-d3-graph';
 
-function GodGraphComponent() {
+function GodGraphComponent(props) {
 
-    const me = [{id: this.props.nodes.name.toUpperCase(), 
-        svg: require(`./images/${this.props.nodes.name.toLowerCase()}.jpg`), fontColor: 'red', size: 800 }]
+    const me = [{id: props.nodes.name.toUpperCase(), 
+        svg: require(`./images/${props.nodes.name.toLowerCase()}.jpg`), fontColor: 'red', size: 800 }]
 
-    const mom = [{id: this.props.nodes.mother, size: 200, 
-        svg: require(`./images/${this.props.nodes.mother.toLowerCase()}.jpg`), fontColor: 'blue' }]
+    const mom = [{id: props.nodes.mother, size: 200, 
+        svg: require(`./images/${props.nodes.mother.toLowerCase()}.jpg`), fontColor: 'blue' }]
 
-    const dad = [{id: this.props.nodes.father, size: 200, 
-        svg: require(`./images/${this.props.nodes.father.toLowerCase()}.jpg`), fontColor: 'blue' }]
+    const dad = [{id: props.nodes.father, size: 200, 
+        svg: require(`./images/${props.nodes.father.toLowerCase()}.jpg`), fontColor: 'blue' }]
 
-    const siblings = this.props.nodes.siblings.map(sibling => {
+    const siblings = props.nodes.siblings.map(sibling => {
 	   return {id: sibling, size: 200, svg: require(`./images/${sibling.toLowerCase()}.jpg`), fontColor: 'blue' } } ) 
 
-    const kids = this.props.nodes.children.map(child => {
+    const kids = props.nodes.children.map(child => {
 	   return {id: child, size: 200, svg: require(`./images/${child.toLowerCase()}.jpg`), fontColor: 'blue' } } ) 
 
     const theFolks = { id: 'Parents', symbolType: "diamond", fontColor: 'green', collapsable: true }
@@ -115,7 +115,7 @@ const onMouseOutLink = function(source, target) {
 
 return( 
 <div className="kewlGraph">
-{this.props.nodes ? 
+{props.nodes ? 
 	<Graph
     id="graph-id" // id is mandatory, if no id is defined rd3g will throw an error
     data={data}
