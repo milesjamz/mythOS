@@ -18,93 +18,70 @@ changeMyGod = (godName) => {
 
 handleOnSubmit = (e) => {
   e.preventDefault()
-const land = this.state.landAndSea
-const family = this.state.familyOrWild
-const war = this.state.warAndPeace
-const sun = this.state.sunOrMoon
-const cool = this.state.coolOrTemper
+// const land = this.state.landAndSea
+//   const family = this.state.familyOrWild
+//     const war = this.state.warAndPeace
+//       const sun = this.state.sunOrMoon
+//         const cool = this.state.coolOrTemper
 
-if(land === '0' && family === '0' && war === '0' && sun === '0' && cool === '1') {
-  alert('Your new favorite god is Hephaestus, god of Volcanoes and Inventions!')
-  this.changeMyGod('Hephaestus')
-} 
-else if(
-  land === '0' && family === '1' && war === '0' && sun === '0' && cool === '0' ||
-  land === '0' && family === '1' && war === '0' && sun === '1' && cool === '0' ||
-  land === '0' && family === '0' && war === '0' && sun === '1' && cool === '0'
-  ) {
-  alert('Your new favorite god is Zeus, king of the Gods!')
-  this.changeMyGod('Zeus')
-}
-else if(land === '0' && family === '0' && war === '0' && sun === '0' && cool === '0') {
-  alert('Your new favorite god is Ares, god of War!')
-  this.changeMyGod('Ares')
-} 
-else if(
-  land === '0' && family === '0' && war === '0' && sun === '1' && cool === '1' ||
-  land === '1' && family === '0' && war === '0' && sun === '1' && cool === '1' ||
-  land === '0' && family === '0' && war === '0' && sun === '0' && cool === '1'
-  ) {
-  alert('Your new favorite goddess is Athena, Goddess of War and Wisdom!')
-  this.changeMyGod('Athena')
-} 
-else if(
-  land === '1' && family === '0' && war === '0' && sun === '0' && cool === '0' ||
-  land === '1' && family === '0' && war === '0' && sun === '1' && cool === '0' ||
-  land === '1' && family === '0' && war === '0' && sun === '0' && cool === '0') {
-  alert('Your new favorite god is Poseidon, king of the Oceans!')
-  this.changeMyGod('Poseidon')
-}
+let response = this.state.landAndSea + this.state.familyOrWild + this.state.warAndPeace + this.state.sunOrMoon + this.state.coolOrTemper
 
-else if(
-  land === '0' && family === '1' && war === '1' && sun === '0' && cool === '1' ||
-  land === '0' && family === '1' && war === '1' && sun === '1' && cool === '1' ||
-  land === '1' && family === '1' && war === '1' && sun === '1' && cool === '1' ||
-  land === '1' && family === '1' && war === '1' && sun === '1' && cool === '1' ||
-  land === '0' && family === '1' && war === '1' && sun === '1' && cool === '1' ||
-  land === '0' && family === '1' && war === '1' && sun === '0' && cool === '1'
-  ) {
-  alert('Your new favorite god is Dionysus, God of Wine, Poetry and Song!')
-  this.changeMyGod('Dionysus')
-}  
+switch (response) {
+  case '00000':
+    alert('Your new favorite god is Ares, god of War!')
+      this.changeMyGod('Ares')
+      break;
 
-else if(
-  land === '0' && family === '0' && war === '0' && sun === '0' && cool === '1' ||
-  land === '0' && family === '1' && war === '1' && sun === '0' && cool === '1' ||
-  land === '1' && family === '1' && war === '1' && sun === '0' && cool === '1' ||
-  land === '1' && family === '0' && war === '1' && sun === '0' && cool === '0'
-  ) {
-  alert('Your new favorite god is Apollo, god of Music and the Sun!')
-  this.changeMyGod('Apollo')
-} 
+  case '00001':
+    alert('Your new favorite god is Hephaestus, god of Volcanoes and Inventions!')
+     this.changeMyGod('Hephaestus')
+      break;
 
-else if(
-  land === '0' && family === '0' && war === '0' && sun === '0' && cool === '1' ||
-  land === '0' && family === '1' && war === '1' && sun === '0' && cool === '1' ||
-  land === '1' && family === '1' && war === '1' && sun === '0' && cool === '1'
-  ) {
-  alert('Your new favorite goddess is Artemis, goddess of Hunting and the Moon!')
-  this.changeMyGod('Artemis')
-} 
-
-else if(
-  land === '0' && family === '0' && war === '1' && sun === '0' && cool === '1' ||
-  land === '1' && family === '0' && war === '1' && sun === '1' && cool === '1' ||
-  land === '0' && family === '1' && war === '1' && sun === '0' && cool === '1' ||
-  land === '1' && family === '1' && war === '1' && sun === '1' && cool === '1' 
-  ) {
-  alert('Your new favorite goddess is Aphrodite, goddess of Beauty!')
-  this.changeMyGod('Aphrodite')
-}
-else if(land === '1' && family === '1' && war === '0' && sun === '1' && cool === '1') {
-  alert('Your new favorite god is Kevin, keep him safe from peanuts!!!')
-  this.changeMyGod('Kevin')
-}
-else if(land === '1' && family === '0' && war === '0' && sun === '0' && cool === '1') {
-  alert('Your new favorite goddess is Hera, queen of the Gods!')
-  this.changeMyGod('Hera')
-}
-else {
+  case '01000':
+  case '01011':
+  case '00010':
+    alert('Your new favorite god is Zeus, king of the Gods!')
+     this.changeMyGod('Zeus')
+      break;
+  case '00011':
+  case '10011':
+    alert('Your new favorite goddess is Athena, Goddess of War and Wisdom!')
+      this.changeMyGod('Athena')
+        break;
+  case '10000':
+  case '10010':
+    alert('Your new favorite god is Poseidon, king of the Oceans!')
+     this.changeMyGod('Poseidon')
+      break;
+  case '01101':
+  case '01111':
+  case '11111':
+    alert('Your new favorite god is Dionysus, God of Wine, Poetry and Song!')
+      this.changeMyGod('Dionysus')
+        break;
+  case '11101':
+  case '10100':
+    alert('Your new favorite god is Apollo, god of Music and the Sun!')
+      this.changeMyGod('Apollo')
+        break;
+  case '10101':
+    alert('Your new favorite goddess is Artemis, goddess of Hunting and the Moon!')
+      this.changeMyGod('Artemis')
+        break;
+  case '00101':
+  case '10111':
+    alert('Your new favorite goddess is Aphrodite, goddess of Beauty!')
+      this.changeMyGod('Aphrodite')
+        break;
+  case '11011':
+    alert('Your new favorite god is Kevin, keep him safe from peanuts!!!')
+     this.changeMyGod('Kevin')
+      break;
+  case '10001':
+    alert('Your new favorite goddess is Hera, queen of the Gods!')
+      this.changeMyGod('Hera')
+        break;
+  default:
 let randomGod = Math.floor(Math.random() * 4)
 if(randomGod === 0) {
   alert('Your new favorite god is Hermes, God of Messengers and Trade!')
@@ -124,6 +101,7 @@ else if(randomGod === 3) {
     }
   }
 }
+
 
 handleOnChange = (e) => {
   this.setState({ [e.target.name]: e.target.value })

@@ -11,7 +11,7 @@ state = {
 
   handleSubmit = e => {
     e.preventDefault();
-    { this.props.findGod(this.state.searchField)}
+    { this.props.findGod(this.state.searchField) }
   };
 
   handleOnChange = e => {
@@ -20,7 +20,7 @@ state = {
 
   dropdownTypeChange = e => {
     this.setState({ filterType: e.target.value });
-    {this.props.filterChange(e.target.value)}
+    { this.props.filterChange(e.target.value) }
   };
 
 

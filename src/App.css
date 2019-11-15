@@ -34,18 +34,12 @@ a:hover {
 	color: #2175d8;
 }
 
-textarea {
-	resize: none;
-}
-
-
 .landingPage {
 	background-image: url("./images/ruinedtemple.png");
 	height: 100%;
 	background-repeat: no-repeat;
 	background-color: #7DCEC7;
 	background-position: 100% 0%;
-	/*margin-top: -.2%;*/
 }
 
 .deleteBtn {
@@ -194,11 +188,8 @@ textarea {
 }
 
 .locationDeets {
-/*	margin-right:10%;
-	margin-top: 5%;*/
 	text-align: center;
 	background-color: linen;
-	/*width: 55%;*/
 	float:right;
 	border-style: solid;
 	border-color: #2175d8;
@@ -207,8 +198,6 @@ textarea {
 }
 
 .godShow {
-	/*height: 100%;*/
-	/*width: 100%;*/
 	background-image: url('./images/marblebkg.jpg')
 }
 
