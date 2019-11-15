@@ -1,14 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-class LocationPage extends React.Component {
+function LocationPage(props) {
 
-
-render() {
-	let theSpot = this.props.allLocations.find(location => location.id === parseInt(this.props.match.params.locationId) )
-	console.log(theSpot)
+	let theSpot = props.allLocations.find(location => location.id === parseInt(props.match.params.locationId) )
+	// console.log(theSpot)
 	return (
-		<div className="locationShow">
+		<div className="containerBkg">
 <img src={require(`./images/${theSpot.image}`)} className="locPic" alt="location" width="300" height="300" /><br />
 <div className="locationDeets">
 <h1> Name: {theSpot.name} </h1>
@@ -26,6 +24,4 @@ render() {
 		</div>
 		)
 	}
-}
-
 export default LocationPage

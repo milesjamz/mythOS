@@ -21,11 +21,11 @@ render() {
 	let thisStory = this.props.allStories.find(story => story.id === parseInt(this.props.match.params.storyId) )
 console.log(this.state)
 	return (
-		<div className="storyContainer">
-			<StoryPage story={thisStory} user={this.props.myUser}/>
-			<CommentContainer story={thisStory} user={this.props.myUser} />
+		<div className="containerBkg">
 			<StoryMap handleOnClick={this.handleOnClick} story={thisStory} />
+			<StoryPage story={thisStory} user={this.props.myUser}/>
 			<DetailsPage clickedThing={this.state.clickedThing} story={thisStory} />
+			<CommentContainer story={thisStory} user={this.props.myUser} />
 		</div>
 		)
 	}
