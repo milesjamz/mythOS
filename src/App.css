@@ -24,6 +24,7 @@ ul {
 button {
 	border: none;
 	color:blue;
+	width:30%;
 }
 
 a {
@@ -63,14 +64,12 @@ a:hover {
 .favGodQuestions {
 	text-align: right;
 	padding: 10px;
-	padding-right: 50px;
+	margin-top:2%;
 	margin-left: 25%;
-	margin-top: 10%;
 	border-style: solid;
 	box-shadow: 5px 10px;
-	width: 40%;
+	width: 50%;
 	background-color: linen;
-	/*border-image: url('./images/meander.jpg') 250 round;*/
 }
 
 .godPic {
@@ -78,8 +77,8 @@ a:hover {
 	margin: 40px;
 	border-style: solid;
 	border-color: #2175d8;
-	height: 30%;
-	width: 30%;
+	height: 27vh;
+	width: 40%;
 }
 
 .locPic {
@@ -87,10 +86,8 @@ a:hover {
 	margin: 40px;
 	border-style: solid;
 	border-color: #2175d8;
-	height:500px;
-	width:400px;
-	margin-top:6%;
-	margin-left:10%;
+	height: 27vh;
+	width: 40%;	
 }
 
 .loginForm {
@@ -115,27 +112,26 @@ a:hover {
 .journeys {
 	text-align: center;
 	background-image: url('./images/marblebkg.jpg');
-	height:1000px;
-	width: 1800px;
+	height:100vh;
+	width: 100%;
 	padding-right: 10%;
 }
 .journeyMap {
 	float: right;
-	/*margin-right: -190%;*/
-	margin-top: 5%;
-	height:705px;
-	width:600px;
+	margin-top:3%;
+	height:65vh;
+	width:60%;
 	border-style: solid;
 	border-color: #2175d8;
 }
 
 .journeyText {
 	float:left;
-	margin-left: 20%;
-	border-style: solid;
-	border-color: #2175d8;
-	margin-top:10%;
+	margin-left: 7%;
+	margin-top:5%;
 	background-color:linen;
+	border-style: solid;
+	border-color: #2175d8;	
 }
 
 .profile {
@@ -151,20 +147,23 @@ a:hover {
 
 .storyMap {
 	float: left;
-	padding:.5%;
+	padding:1%;
 	margin-top: 1%;
-	height: 70%;
+	height: 70vh;
 	width: 30%;
 	border-style: solid;
 	border-color: #2175d8;
 	display: inline-grid;
+	background-color: linen;
+	overflow: auto;
 }
 
+
 .storyShow {
-	float: center;	
-	padding:.5%;
+	float: left;	
+	padding:1%;
 	margin-top:1%;
-	height: 10%;
+	height: 70vh;
 	width: 30%;
 	background-color: linen;
 	overflow: auto;
@@ -174,17 +173,16 @@ a:hover {
 }
 
 .storyDetail {
-	float:right;	
-	padding:.5%;
+	float:left;		
+	padding:1%;	
 	margin-top:1%;	
-	height: 30%;
-	width: 20%;
+	height: 70vh;
+	width: 30%;
 	background-color: linen;
 	overflow: auto;	
 	border-style: solid;
 	border-color: #2175d8;
 	display: inline-grid;
-	position: top;
 }
 
 .locationDeets {
@@ -201,14 +199,6 @@ a:hover {
 	background-image: url('./images/marblebkg.jpg')
 }
 
-.kewlGraph {
-	background-image: url('./images/marblebkg.jpg');	
-	float: left;
-	width: 100%;
-	padding-left:10%;
-	/*height: 100%;*/
-}
-
 .godDeets {
 	position:absolute;
 	right:1%;
@@ -220,6 +210,13 @@ a:hover {
 	float:right;
 	border-style: solid;
 	border-color: #2175d8;
+}
+
+.kewlGraph {
+	background-image: url('./images/marblebkg.jpg');	
+	float: left;
+	width: 100%;
+	padding-left:10%;
 }
 
 .commentContainer {
@@ -235,6 +232,13 @@ a:hover {
 	background-color: linen;
 	display: inline-grid;
 
+}
+
+.stories {
+	text-align: center;
+	height: 100vh;
+	width: 100%;
+	background-image: url('./images/marblebkg.jpg');
 }
 
 .storyList {
@@ -258,9 +262,8 @@ a:hover {
 .godsPage {
 	text-align: center;
 	background-image: url('./images/marblebkg.jpg');
-	height:1000px;
-	width: 1800px;
-	padding-right: 10%;
+	height:100vh;
+	width: 100%;
 }
 
 .heroes {
@@ -269,19 +272,12 @@ a:hover {
 	border-style: solid;
 	border-color: #2175d8;
 	overflow: auto;
-	height:450px;
-	width:450px;
 	margin-left:35%;
+	text-align:center;
+	height:80vh;
 	width: 30%;
 }
 
-.stories {
-	text-align: center;
-	padding-right: 10%;
-	height: 1000px;
-	width: 1800px;
-	background-image: url('./images/marblebkg.jpg');
-}
 
 .locations {
 	float: left;

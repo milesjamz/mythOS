@@ -18,13 +18,8 @@ changeMyGod = (godName) => {
 
 handleOnSubmit = (e) => {
   e.preventDefault()
-// const land = this.state.landAndSea
-//   const family = this.state.familyOrWild
-//     const war = this.state.warAndPeace
-//       const sun = this.state.sunOrMoon
-//         const cool = this.state.coolOrTemper
-
-let response = this.state.landAndSea + this.state.familyOrWild + this.state.warAndPeace + this.state.sunOrMoon + this.state.coolOrTemper
+    let answers = this.state
+      let response = Object.values(answers).join('')
 
 switch (response) {
   case '00000':
@@ -43,6 +38,7 @@ switch (response) {
     alert('Your new favorite god is Zeus, king of the Gods!')
      this.changeMyGod('Zeus')
       break;
+      
   case '00011':
   case '10011':
     alert('Your new favorite goddess is Athena, Goddess of War and Wisdom!')
@@ -102,7 +98,6 @@ else if(randomGod === 3) {
   }
 }
 
-
 handleOnChange = (e) => {
   this.setState({ [e.target.name]: e.target.value })
 }
@@ -111,20 +106,11 @@ render() {
 
 return (
 <div className="favGodQuestions">
-<h3>Welcome, {this.props.user.username}, answer some questions to find the God who's right for YOU!</h3>
+<h3>Welcome, {this.props.user.username}, answer some questions to find the god who is right for YOU!</h3>
 
         <form onSubmit={this.handleOnSubmit}>
 <br />
-Question 1 -=- <span style={{'color':'red'}}>War</span> or <span style={{'color':'blue'}}>Peace</span>?
-💂
-<input type="range"
-            value={this.state.warAndPeace}
-            onChange={this.handleOnChange}
-            min="0"
-            max="1"
-            step="1"
-            name="warAndPeace" />☮<br /><br />
-Question 2 -=- On vacations, do you go to the <span style={{'color':'red'}}>Mountains</span> or 
+Question 1 -=- On vacations, do you go to the <span style={{'color':'red'}}>Mountains</span> or 
 the <span style={{'color':'blue'}}>Sea</span>?
 ⛰
 <input type="range" 
@@ -134,7 +120,8 @@ the <span style={{'color':'blue'}}>Sea</span>?
             max="1"
             step="1"
             name="landAndSea" />🌊<br /><br />
-Question 3 -=- Do you long for the <span style={{'color':'red'}}>Family Life</span> or the 
+
+Question 2 -=- Do you long for the <span style={{'color':'red'}}>Family Life</span> or the 
 <span style={{'color':'blue'}}> Wild Life</span>?
 👪
 <input type="range" 
@@ -144,6 +131,17 @@ Question 3 -=- Do you long for the <span style={{'color':'red'}}>Family Life</sp
             max="1"
             step="1"
             name="familyOrWild" />🍷<br /><br />
+
+Question 3 -=- <span style={{'color':'red'}}>War</span> or <span style={{'color':'blue'}}>Peace</span>?
+💂
+<input type="range"
+            value={this.state.warAndPeace}
+            onChange={this.handleOnChange}
+            min="0"
+            max="1"
+            step="1"
+            name="warAndPeace" />☮<br /><br />
+
 Question 4 -=- Do you worship the <span style={{'color':'red'}}>Sun</span>, or love the 
 <span style={{'color':'blue'}}> Moon</span>?
 🌞
@@ -154,6 +152,7 @@ Question 4 -=- Do you worship the <span style={{'color':'red'}}>Sun</span>, or l
             max="1"
             step="1"
             name="sunOrMoon" />🌜<br /><br />
+
 Question 5 -=- Do you have a short <span style={{'color':'red'}}>Temper</span>, or do you play it 
 <span style={{'color':'blue'}}> Cool</span>?
 ⚔
@@ -168,7 +167,6 @@ Question 5 -=- Do you have a short <span style={{'color':'red'}}>Temper</span>, 
         type="submit" 
         value="Submit"
         label="Find the God for you!"
-        // onClick={() => this.handleOnClick}
         />
 </form>
 </div>

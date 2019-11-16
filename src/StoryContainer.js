@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import StoryPage from './StoryPage'
 import CommentContainer from './CommentContainer'
 import StoryMap from './StoryMap'
-import DetailsPage from './DetailsPage'
+import DetailsComponent from './DetailsComponent'
 
 class StoryContainer extends React.Component {
 
@@ -24,7 +24,7 @@ console.log(this.state)
 		<div className="containerBkg">
 			<StoryMap handleOnClick={this.handleOnClick} story={thisStory} />
 			<StoryPage story={thisStory} user={this.props.myUser}/>
-			<DetailsPage clickedThing={this.state.clickedThing} story={thisStory} />
+			<DetailsComponent clickedThing={this.state.clickedThing} />
 			<CommentContainer story={thisStory} user={this.props.myUser} />
 		</div>
 		)

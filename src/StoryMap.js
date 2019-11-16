@@ -14,14 +14,6 @@ componentDidMount() {
 this.setState({ markers: this.props.story.locations }) 
 }
 
-
-// handleOnClick = (e, location) => {
-//   this.setState({ 
-//     activeMarker: location, 
-//     isOpen: true 
-//   })
-// }
-
   render() {
 const styles = require('./customMapStyles.json')
     const showGods = () => {
@@ -40,7 +32,7 @@ return this.props.story.gods.map(god =>  <li key={god.id}> <button id={god.id}
     }}
     id="story-map"
     mapContainerStyle={{
-      height: "100%",
+      height: "260px",
       width: "100%"
     }}
     zoom={5}

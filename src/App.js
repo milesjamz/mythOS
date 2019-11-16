@@ -38,7 +38,6 @@ fetch('http://localhost:3000/api/v1/stories')
 fetch('http://localhost:3000/api/v1/gods')
 	.then(resp => resp.json())
 	.then(godsList => {
-		console.log(godsList)
     const myGodTypes = godsList.map(god => god.god_type)
 		this.setState ({ gods: godsList, searchedGods: godsList, filteredGods: godsList, godTypes: 
       [...new Set(myGodTypes)] })
@@ -46,7 +45,6 @@ fetch('http://localhost:3000/api/v1/gods')
 fetch('http://localhost:3000/api/v1/locations')
     .then(resp => resp.json())
     .then(allLocations => {
-    	console.log(allLocations)
       this.setState({ locations: allLocations})
     }) 
 }	
@@ -92,10 +90,8 @@ checkForJourney = () => {
 	})
 	.then(r => r.json())
 	.then(data => {
-		console.log(data)
 	})
 		} else {
-		console.log(this.state.current_user.journeys)
 	}
 }
 
@@ -103,13 +99,11 @@ addToJourney = () => {
 	fetch(`http://localhost:3000/api/v1/users/${this.state.current_user.id}`)
 	.then(resp => resp.json())
 	.then(myInfo => {
-		console.log(myInfo)
 			this.setState({ current_user: myInfo })
 	})
 }
 
 deleteStoryLocation = (deletedLocation) => {
-	console.log(deletedLocation)
 	fetch(`http://localhost:3000/api/v1/journey_locations/${deletedLocation.id}`, {
 		method: 'DELETE' })
 		.then(resp => resp.json())
