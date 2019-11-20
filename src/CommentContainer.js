@@ -8,6 +8,15 @@ state = {
 	myComments: []
 }
 
+// --- loads all comments --- 
+componentDidMount() {
+	fetch('http://localhost:3000/api/v1/comments')
+		.then(resp => resp.json())
+		.then(commentList => {
+			this.setState({ myComments: commentList })
+		})
+}
+
 handleOnChange = (e) => {
 	this.setState({ comment: e.target.value })
 }
@@ -36,14 +45,7 @@ handleOnSubmit = (e) => {
 	})
 }
 
-componentDidMount() {
-	fetch('http://localhost:3000/api/v1/comments')
-		.then(resp => resp.json())
-		.then(commentList => {
-			this.setState({ myComments: commentList })
-		})
-}
-
+// --- if there are comments on this story, show them --- 
 showComments = () => {
 	if(this.state.myComments.length > 0) {
 	let theseComments = this.state.myComments.filter(comment => comment.story_id === this.props.story.id );
@@ -60,6 +62,7 @@ showComments = () => {
 	}
 }
 
+// --- delete a comment ---
 delComment = (e) => {
   console.log(e.target.dataset.user)
   if ( parseInt(e.target.dataset.user) === this.props.user.id ) {
