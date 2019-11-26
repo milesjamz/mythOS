@@ -5,7 +5,7 @@ import Column from './images/column.png'
 function NavBar(props) {
   return (
     <div className="navBar">
-			<h1> m y t h O S </h1>
+			<h1><Link to='/'> <span style={{ color:'white' }}>m y t h O S </span></Link> </h1>
 	{props.loggedIn ? <span id="inAs"> logged in as <Link to='/profile'>
 	<img className="columnPic" src={Column} alt="column" width="27" height="50" /> {props.user.username} </Link> </span> : null }
 	{props.loggedIn ? <Link to='/gods'> <img className="columnPic" src={Column} alt="column" width="27" height="50" />Gods and Goddesses </Link> : null }

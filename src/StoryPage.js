@@ -9,6 +9,7 @@ state = {
 	likeToDelete: ''
 }
 
+// --- loads likes story has ---
 componentDidMount() {
 	fetch('http://localhost:3000/api/v1/likes')
 		.then(resp => resp.json())
@@ -22,7 +23,7 @@ componentDidMount() {
 
 
 render() {
-
+// --- adds or deletes like on button click ---
 const handleOnClick = () => {
 	if(this.state.liked === false) {
 	this.setState ({ liked: true, likes: this.state.likes +1 })

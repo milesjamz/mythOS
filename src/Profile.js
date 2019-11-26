@@ -36,6 +36,7 @@ const sendNewUser = (updatedUser) => {
 	this.props.updateUser(updatedUser)
 }
 
+// --- finds your location and updates profile ---
 const getMyLocation = () => {
 let thisUser = this.props.user.id
 navigator.geolocation.getCurrentPosition(function(position) {
@@ -59,6 +60,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 		})	
 	})
 }
+
 	return (
 		<div className="profile">
 	<img src={require(`${this.props.user.avatar}`)} className="profilePic" 
