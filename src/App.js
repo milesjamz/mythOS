@@ -229,7 +229,7 @@ updateUser = (updatedUser) => {
 render() {
 
   return (
-    		<div>
+    		<div className='godsPage'>
     		{this.state.logged_in ? this.checkForJourney() : null }
     		<NavBar user={this.state.current_user} loggedIn={this.state.logged_in} />
       		{this.state.logged_in ? null : <Signup signUp={this.signUp} /> }

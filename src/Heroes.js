@@ -6,7 +6,8 @@ class Heroes extends React.Component {
 
 state = {
 	searchField: "",
-	filterType: ""
+	filterType: "",
+  modal:false
 }
 
   handleSubmit = e => {
@@ -22,6 +23,14 @@ state = {
     this.setState({ filterType: e.target.value });
     { this.props.filterChange(e.target.value) }
   };
+
+
+// --- opens a modal to add a god ---
+
+  handleOnClick = e => {
+    e.preventDefault()
+    alert('you clickin on me')
+  }
 
 
 render() {
@@ -52,7 +61,8 @@ render() {
               {typeOption}
             </option>
           ))}
-        </select>
+        </select><br/>
+        <button onClick={this.handleOnClick}>Add a god</button>
 <ul>
 {showGods()}
 </ul>
