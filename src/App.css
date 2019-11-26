@@ -43,14 +43,6 @@ a:hover {
 	background-position: 100% 0%;
 }
 
-.deleteBtn {
-	opacity: 0;
-}
-
-.deleteBtn:hover {
-	opacity: 1;
-}
-
 .landingText {
 	color: white;
 	text-align: center;
@@ -61,6 +53,37 @@ a:hover {
 	position: fixed;
 }
 
+.navBar {
+    background-color: #2175d8;
+    text-align: center;
+	padding: 5px;
+	height:9vh;
+}
+
+.navBar h1{
+	color: white;
+	padding-right: 50px;
+}
+
+.navBar a{
+	opacity: .7;
+	color: white;
+	padding: 5px;
+}
+
+.navBar a:hover{
+	color:cyan;
+	opacity:1;
+}
+
+.deleteBtn {
+	opacity: 0;
+}
+
+.deleteBtn:hover {
+	opacity: 1;
+}
+
 .favGodQuestions {
 	text-align: right;
 	padding: 10px;
@@ -69,7 +92,7 @@ a:hover {
 	border-style: solid;
 	box-shadow: 5px 10px;
 	width: 70%;
-	background-color: linen;
+	background-color: Bisque;
 }
 
 .godPic {
@@ -99,7 +122,6 @@ a:hover {
 	box-shadow: 5px 10px;
 }
 
-
 .signupForm {
 	margin-top:10%;
 	float: right;
@@ -113,7 +135,7 @@ a:hover {
 	text-align: center;
 	background-image: url('./images/marblebkg.jpg');
 	height:100vh;
-	width: 100%;
+	width: 90%;
 	padding-right: 10%;
 }
 .journeyMap {
@@ -129,18 +151,19 @@ a:hover {
 	float:left;
 	margin-left: 7%;
 	margin-top:5%;
-	background-color:linen;
+	background-color:Bisque;
 	border-style: solid;
 	border-color: #2175d8;	
 }
 
 .profile {
-	height: 100%;
+	height: 60vh;
 	width: 30%;
-	background-color: coral;
+	background-color: Bisque;
 	text-align: center;
 	border-style: solid;
-	margin-top: 10%;
+	position:absolute;
+	margin-top: 5%;
 	margin-left: 35%;
 	overflow: auto;
 }
@@ -154,10 +177,9 @@ a:hover {
 	border-style: solid;
 	border-color: #2175d8;
 	display: inline-grid;
-	background-color: linen;
+	background-color: Bisque;
 	overflow: auto;
 }
-
 
 .storyShow {
 	float: left;	
@@ -165,7 +187,7 @@ a:hover {
 	margin-top:1%;
 	height: 70vh;
 	width: 22%;
-	background-color: linen;
+	background-color: Bisque;
 	overflow: auto;
 	border-style: solid;
 	border-color: #2175d8;
@@ -178,7 +200,7 @@ a:hover {
 	margin-top:1%;	
 	height: 70vh;
 	width: 22%;
-	background-color: linen;
+	background-color: Bisque;
 	overflow: auto;	
 	border-style: solid;
 	border-color: #2175d8;
@@ -186,34 +208,25 @@ a:hover {
 }
 
 .commentContainer {
-	/*position: fixed;*/
-	/*position: bottom;*/
-	/*margin-bottom: -23%;*/
-	/*left: 70%;*/
 	height: 70vh;
 	width: 22%;
 	overflow: auto;
 	border-style: solid;
 	border-color: #2175d8;	
-	background-color: linen;
+	background-color: Bisque;
 	display: inline-grid;
-	/*float:left;*/
 	padding:1%;
 	margin-top:1%;
 }
 
 .locationDeets {
 	text-align: center;
-	background-color: linen;
+	background-color: Bisque;
 	float:right;
 	border-style: solid;
 	border-color: #2175d8;
 	overflow:auto;
 	display: inline-grid;
-}
-
-.godShow {
-	background-image: url('./images/marblebkg.jpg')
 }
 
 .godDeets {
@@ -223,10 +236,16 @@ a:hover {
 	width:40vh;
 	overflow: auto;
 	text-align: center;
-	background-color: linen;
+	background-color: Bisque;
 	float:right;
 	border-style: solid;
 	border-color: #2175d8;
+}
+
+.godShow {
+	background-image: url('./images/marblebkg.jpg');
+	width:90%;
+	/*height:40%;*/
 }
 
 .kewlGraph {
@@ -246,7 +265,7 @@ a:hover {
 .storyList {
 	overflow: auto;
 	text-align: center;
-	background-color: linen;
+	background-color: Bisque;
 	margin-left:35%;
 	width: 30%;
 	border-style: solid;
@@ -270,7 +289,7 @@ a:hover {
 
 .heroes {
 	padding:1%;
-	background-color:linen;
+	background-color:Bisque;
 	border-style: solid;
 	border-color: #2175d8;
 	overflow: auto;
@@ -290,29 +309,6 @@ a:hover {
 	float: all;
 	width: 2000px;
 	height: 1000px;
-}
-
-.navBar {
-    background-color: #2175d8;
-    text-align: center;
-    color: green;
-	padding: 4px;
-}
-
-.navBar h1{
-	color: white;
-	padding-right: 50px;
-}
-
-.navBar a{
-	opacity: .7;
-	color: white;
-	padding: 5px;
-}
-
-.navBar a:hover{
-	color:cyan;
-	opacity:1;
 }
 
 #inAs {

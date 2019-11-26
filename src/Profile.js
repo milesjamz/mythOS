@@ -62,6 +62,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 }
 
 	return (
+	<div className="godsPage">
 		<div className="profile">
 	<img src={require(`${this.props.user.avatar}`)} className="profilePic" 
 		 alt="pic" 
@@ -79,6 +80,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 			</ul> <br />
 			<button onClick={logOut}>Log Out</button><br />
 		</div>
+	</div>
 		)
 
 }
