@@ -7,6 +7,7 @@ state = {
 	current_city: ''
 }
 
+// --- loads profile on mounting ---
 componentDidMount() {
 	fetch(`http://localhost:3000/api/v1/users/${this.props.user.id}`)
 	.then(resp => resp.json())
