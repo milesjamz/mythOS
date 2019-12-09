@@ -146,6 +146,7 @@ this.setState(prevState => ({
 // --- when you change your god ---
 
 changeGodAndAvatar = (newGod) => {
+	console.log('hello')
  fetch(`http://localhost:3000/api/v1/users/${this.state.current_user.id}`, {
   headers: {
     'Accept': 'application/json',
@@ -157,6 +158,7 @@ changeGodAndAvatar = (newGod) => {
 })
  .then(resp => resp.json())
  .then(newResp => {
+	 console.log(newResp)
   this.updateUser(newResp)
        })
 }
@@ -216,6 +218,8 @@ fetch("http://localhost:3000/api/v1/login", {
 updateUser = (updatedUser) => {
 	this.setState({current_user: updatedUser})
 }
+
+// --- handles change in dropdown menu ---
 
   dropdownTypeChange = godType => {
     const newFilteredGods = this.state.gods.filter(

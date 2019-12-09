@@ -7,7 +7,7 @@ function LocationPage(props) {
 	// console.log(theSpot)
 	return (
 		<div className="containerBkg">
-<img src={require(`./images/${theSpot.image}`)} className="locPic" alt="location" width="300" height="300" /><br />
+<img src={require(`./images/${theSpot.image}`)} className="locPic" alt="location" width="350" height="500" style={{float:'left', 'margin-left':'17%'}}/><br />
 <div className="locationDeets">
 <h1> Name: {theSpot.name} </h1>
 <h2> Associated Gods: </h2>

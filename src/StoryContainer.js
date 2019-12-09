@@ -17,15 +17,17 @@ handleOnClick = (godOrPlace) => {
   })
 }
 
+
+
 render() {
 	let thisStory = this.props.allStories.find(story => story.id === parseInt(this.props.match.params.storyId) )
 console.log(this.state)
 	return (
-		<div className="containerBkg">
-			<StoryMap handleOnClick={this.handleOnClick} story={thisStory} />
-			<StoryPage story={thisStory} user={this.props.myUser}/>
-			<DetailsComponent clickedThing={this.state.clickedThing} />
-			<CommentContainer story={thisStory} user={this.props.myUser} />
+		<div className="storyContainer">
+				<StoryMap handleOnClick={this.handleOnClick} story={thisStory} />
+					<StoryPage story={thisStory} user={this.props.myUser}/>
+						<DetailsComponent clickedThing={this.state.clickedThing} />
+							<CommentContainer story={thisStory} user={this.props.myUser} />
 		</div>
 		)
 	}

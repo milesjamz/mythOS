@@ -12,8 +12,6 @@ state = {
     isOpen: false
 }
 
-
-
 handleAddLocation = (location) => {
   const newJourneyLocation = {
     journey_id: this.props.user.journeys[0].id,
@@ -45,7 +43,6 @@ handleOnClick = (location) => {
     isOpen: true 
   }) 
 }
-
 
 // --- closes the infowindow ---
 

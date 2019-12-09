@@ -78,6 +78,7 @@ a:hover {
 
 .deleteBtn {
 	opacity: 0;
+	width:5px;
 }
 
 .deleteBtn:hover {
@@ -96,7 +97,7 @@ a:hover {
 }
 
 .godPic {
-	float:left;
+	align:center;
 	margin: 40px;
 	border-style: solid;
 	border-color: #2175d8;
@@ -105,12 +106,12 @@ a:hover {
 }
 
 .locPic {
-	float:left;
+	align:center;
 	margin: 40px;
 	border-style: solid;
 	border-color: #2175d8;
-	height: 27vh;
-	width: 40%;	
+	/* height: 27vh;
+	width: 40%;	 */
 }
 
 .loginForm {
@@ -140,6 +141,7 @@ a:hover {
 	width: 90%;
 	padding-right: 10%;
 }
+
 .journeyMap {
 	float: right;
 	margin-top:3%;
@@ -170,55 +172,65 @@ a:hover {
 	overflow: auto;
 }
 
+.storyContainer {
+display: flex;
+flex-direction: row;
+height: 100%;
+width: 100%;
+flex-wrap: wrap;
+justify-content: center;
+justify-content: space-between;
+background-image: url('./images/marblebkg.jpg');
+}
+
 .storyMap {
-	float: left;
-	padding:1%;
-	margin-top: 1%;
+	margin:2%;
+	margin-top: 2%;
 	height: 70vh;
-	width: 22%;
+	width: 20%;
 	border-style: solid;
 	border-color: #2175d8;
-	display: inline-grid;
 	background-color: Bisque;
 	overflow: auto;
+	flex-basis: 400px;
+ 
 }
 
 .storyShow {
-	float: left;	
-	padding:1%;
-	margin-top:1%;
+	margin:2%;
+	margin-top:2%;
 	height: 70vh;
-	width: 22%;
+	width: 20%;
 	background-color: Bisque;
 	overflow: auto;
 	border-style: solid;
 	border-color: #2175d8;
-	display: inline-grid;
+	flex-basis: 400px;
+ 
 }
 
 .storyDetail {
-	float:left;		
-	padding:1%;	
-	margin-top:1%;	
+	margin:2%;	
+	margin-top:2%;
 	height: 70vh;
-	width: 22%;
+	width: 20%;
 	background-color: Bisque;
 	overflow: auto;	
 	border-style: solid;
 	border-color: #2175d8;
-	display: inline-grid;
+	flex-basis: 400px;
+ 
 }
 
 .commentContainer {
-	height: 70vh;
-	width: 22%;
+	align:center;
+	height: 12vh;
+	width: 70%;
 	overflow: auto;
 	border-style: solid;
 	border-color: #2175d8;	
 	background-color: Bisque;
-	display: inline-grid;
-	padding:1%;
-	margin-top:1%;
+	margin-left:15%;
 }
 
 .locationDeets {
@@ -229,6 +241,9 @@ a:hover {
 	border-color: #2175d8;
 	overflow:auto;
 	display: inline-grid;
+	width:30%;
+	height:85vh;
+	margin-right:10%;
 }
 
 .godDeets {
