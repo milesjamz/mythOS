@@ -14,6 +14,7 @@ import LocationPage from './LocationPage'
 import Landing from './Landing'
 import JourneyPage from './JourneyPage'
 import Questionnaire from './Questionnaire'
+import { notDeepEqual } from 'assert';
 
 
 class App extends React.Component {
@@ -72,6 +73,8 @@ fetch('http://localhost:3000/api/v1/users', {
   })
 }
 
+// ---checks to see if you have a journey attatched to this user, if not, creates one and adds it ---
+
 checkForJourney = () => {
 	if (this.state.current_user.journeys.length === 0) {
 		const newJourney = {
@@ -90,6 +93,8 @@ checkForJourney = () => {
 	})
 	.then(r => r.json())
 	.then(data => {
+		console.log(data)
+		this.addToJourney()
 	})
 		} else {
 	}
