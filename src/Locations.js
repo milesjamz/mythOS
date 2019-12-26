@@ -47,7 +47,6 @@ handleOnClick = (location) => {
 // --- closes the infowindow ---
 
 onToggle = () => {
-  // console.log('o boy')
   this.setState({ isOpen: false })
 }
 

@@ -94,9 +94,7 @@ render() {
 		</div>
 		)
 
-}
-
-
+	}
 }
 
 export default CommentContainer

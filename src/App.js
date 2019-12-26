@@ -16,9 +16,6 @@ import JourneyPage from './JourneyPage'
 import Questionnaire from './Questionnaire'
 import { notDeepEqual } from 'assert';
 
-console.log('err')
-console.log(process.env.REACT_APP_GOOGLE_API_KEY)
-
 class App extends React.Component {
 
 	state = {
