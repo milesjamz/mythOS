@@ -110,7 +110,7 @@ return (
 <div className="journeyMap">
  <LoadScript
         id="script-loader"
-        googleMapsApiKey="AIzaSyACBWETZZQkB83El_5GcM3i90HD7t_R-to"
+        googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}
       >
   <GoogleMap
     id="journey-map"
