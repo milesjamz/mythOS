@@ -21,9 +21,13 @@ handleOnChange = (e) => {
 	this.setState({ comment: e.target.value })
 }
 
+// --- adds the new comment ---
 handleOnSubmit = (e) => {
 	e.preventDefault();
-	let newComment = {
+if (!this.state.comment) { alert("You can't submit an empty comment!") } 
+else
+{
+let newComment = {
 		user_id: this.props.user.id,
 		user_name: this.props.user.username,
 		story_id: this.props.story.id,
@@ -42,7 +46,8 @@ handleOnSubmit = (e) => {
       .then(newComment => {
       	console.log(newComment)
       	this.setState ({ myComments: [...this.state.myComments, newComment], comment: '' })
-	})
+		})
+	}
 }
 
 // --- if there are comments on this story, show them --- 
