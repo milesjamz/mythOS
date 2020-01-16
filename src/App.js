@@ -22,6 +22,7 @@ class App extends React.Component {
 		current_user: '',
 		logged_in: false,
 		stories: [],
+		sortedStories: [],
     locations: [],
 		gods: [],
     godTypes: [],
@@ -33,7 +34,7 @@ componentDidMount() {
 fetch('http://localhost:3000/api/v1/stories')
 	.then(resp => resp.json())
 	.then(storyList => {
-		this.setState ({ stories: storyList})
+		this.setState ({ stories: storyList, sortedStories: storyList })
 	})
 fetch('http://localhost:3000/api/v1/gods')
 	.then(resp => resp.json())
@@ -45,7 +46,7 @@ fetch('http://localhost:3000/api/v1/gods')
 fetch('http://localhost:3000/api/v1/locations')
     .then(resp => resp.json())
     .then(allLocations => {
-      this.setState({ locations: allLocations})
+      this.setState({ locations: allLocations })
     }) 
 }	
 
@@ -223,9 +224,9 @@ updateUser = (updatedUser) => {
 	this.setState({current_user: updatedUser})
 }
 
-// --- handles change in dropdown menu ---
+// --- handles change in gods dropdown  ---
 
-  dropdownTypeChange = godType => {
+  godDropDownChange = godType => {
     const newFilteredGods = this.state.gods.filter(
       god => god.god_type === godType
     );
@@ -233,6 +234,21 @@ updateUser = (updatedUser) => {
       ? this.setState({ filteredGods: this.state.gods })
       : this.setState({ filteredGods: newFilteredGods });
   };
+
+// --- handles change in stories dropdown ---
+
+  storyDropDownChange = storyType => {
+	//   console.log(this.state.stories.map(story => story[storyType] ))
+	const newStorySort = this.state.stories.sort(
+		((a,b) => (a[storyType] < b[storyType] ? 1 : -1 )
+		)
+	)
+	//   storyType === "reset"
+	// 	? this.setState({ sortedStories: this.state.stories })
+	// 	: this.setState({ sortedStories: newStorySort });
+	};
+	
+
 
 render() {
 
@@ -248,7 +264,9 @@ render() {
    		    	   	)} /> : null }
    		   	{this.state.logged_in ? <Route exact path='/stories' 
    		    	   render={routerProps => (
-   		    	   	<Stories stories={this.state.stories} {...routerProps} />
+   		    	   	<Stories stories={this.state.sortedStories} {...routerProps} 
+							 filterChange={this.storyDropDownChange}
+					/>
    		    	   	)} /> : null }
 			{this.state.logged_in ? <Route exact path='/locations' 
    		    	   render={routerProps => (
@@ -265,7 +283,7 @@ render() {
                         filterGods={this.state.filteredGods}
                         findGod={this.searchforGod}
                         dropDown={this.state.godTypes}
-                        filterChange={this.dropdownTypeChange}
+                        filterChange={this.godDropDownChange}
                 {...routerProps} />
    		    	   	)} /> : null }
    		   	{this.state.logged_in ? <Route exact path="/stories/:storyId"
