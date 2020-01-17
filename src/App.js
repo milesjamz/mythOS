@@ -238,15 +238,18 @@ updateUser = (updatedUser) => {
 // --- handles change in stories dropdown ---
 
   storyDropDownChange = storyType => {
-	//   console.log(this.state.stories.map(story => story[storyType] ))
+	  if (storyType === "likes" || storyType === "comments") {
 	const newStorySort = this.state.stories.sort(
 		((a,b) => (a[storyType] < b[storyType] ? 1 : -1 )
 		)
 	)
-	//   storyType === "reset"
-	// 	? this.setState({ sortedStories: this.state.stories })
-	// 	: this.setState({ sortedStories: newStorySort });
-	};
+	  } else {
+	const newStorySort = this.state.stories.sort(
+		((a,b) => (a[storyType] > b[storyType] ? 1 : -1 )
+		)
+	)		  
+  }
+};
 	
 
 

@@ -29,9 +29,9 @@ render() {
 	onChange={this.dropdownTypeChange}
 	>
 <option value="id">Sort Stories By:</option>
-<option value="likes">Most Liked</option>
-<option value="comments">Most Commented</option>
-
+<option value="author">Alphabetically By Author</option>
+<option value="likes">Most Likes</option>
+<option value="comments">Most Comments</option>
 	</select>
 <ul>
 {this.showStories()}
