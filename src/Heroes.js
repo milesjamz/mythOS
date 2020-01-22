@@ -27,13 +27,12 @@ state = {
 
 // --- opens a modal to add a god ---
 
-  // handleOnClick = e => {
-  //   e.preventDefault()
-  //   alert('you clickin on me')
-  // }
+  handleOnClick = e => {
+    e.preventDefault()
+    alert('you clickin on me')
+    this.setState({ modal: !this.state.modal })
+  }
 
-  // <br/>
-  //       <button onClick={this.handleOnClick}>Add a god</button>
 
 render() {
   const showGods = () => {
@@ -52,6 +51,10 @@ render() {
           handleOnChange={this.handleOnChange}
           value={this.state.searchField}
         />
+
+  <br/>
+        <button onClick={this.handleOnClick}>Add a god</button>
+  <br/>
 
         <select
           value={this.state.filterType}
