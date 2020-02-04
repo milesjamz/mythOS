@@ -17,7 +17,6 @@ handleAddLocation = (location) => {
     journey_id: this.props.user.journeys[0].id,
     location_id: location.id
   }
-  console.log(newJourneyLocation)
     fetch('http://localhost:3000/api/v1/journey_locations', {
         method: 'POST',
         headers: {
@@ -35,18 +34,16 @@ handleAddLocation = (location) => {
   })
 }
 
-// --- opens the infowindow ---
-
 handleOnClick = (location) => {
+// --- opens the infowindow ---
   this.setState({ 
     activeMarker: location, 
     isOpen: true 
   }) 
 }
 
-// --- closes the infowindow ---
-
 onToggle = () => {
+// --- closes the infowindow ---
   this.setState({ isOpen: false })
 }
 

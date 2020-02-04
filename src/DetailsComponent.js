@@ -15,7 +15,6 @@ const itsAGod = () => {
 		)
 }
 
-
 const itsALocation = () => {
 	return (
 		<div>
