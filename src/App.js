@@ -73,9 +73,11 @@ fetch('http://localhost:3000/api/v1/users', {
   })
 }
 
-// ---checks to see if you have a journey attatched to this user, if not, creates one and adds it ---
 
 checkForJourney = () => {
+/* --- checks to see if the user has a journey attatched to them - if not, 
+creates one and adds it ---
+*/
 	if (this.state.current_user.journeys.length === 0) {
 		const newJourney = {
 			user_id: this.state.current_user.id,
@@ -131,9 +133,8 @@ this.setState(prevState => ({
 	)
 )}
 
-// --- finds gods, also throws easter eggs ---
-
   searchforGod = formInput => {
+// --- finds gods, also throws easter eggs ---
     let searchedGods = this.state.gods.filter(god =>
       god.name.toLowerCase().includes(formInput.toLowerCase())
     );
@@ -147,11 +148,8 @@ this.setState(prevState => ({
       : this.setState({ searchedGods: searchedGods });
   };
 
-
-// --- when you change your god ---
-
 changeGodAndAvatar = (newGod) => {
-	console.log('hello')
+// --- when you change your god ---
  fetch(`http://localhost:3000/api/v1/users/${this.state.current_user.id}`, {
   headers: {
     'Accept': 'application/json',
@@ -168,9 +166,8 @@ changeGodAndAvatar = (newGod) => {
        })
 }
 
-// --- gets your profile from the server ---
-
   getProfileFromServer = () => {
+// --- gets your profile from the server ---
     if (localStorage.token) {
       fetch("http://localhost:3000/api/v1/profile", {
         headers: {
@@ -188,17 +185,13 @@ changeGodAndAvatar = (newGod) => {
     }
   };
 
-
-// --- logs out the user ---
-
 logOut = () => {
+// --- logs out the user ---
 	this.setState({ current_user: '', logged_in: false })
 }
-
-// --- logs in the user ---
-
 logIn = (sentState) => {
-fetch("http://localhost:3000/api/v1/login", {
+// --- logs in the user ---
+	fetch("http://localhost:3000/api/v1/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -218,16 +211,14 @@ fetch("http://localhost:3000/api/v1/login", {
       });
 }
 
-// --- updates the user --- 
-
 updateUser = (updatedUser) => {
+// --- updates the user --- 
 	this.setState({current_user: updatedUser})
 }
 
-// --- handles change in gods dropdown  ---
-
   godDropDownChange = godType => {
-    const newFilteredGods = this.state.gods.filter(
+// --- handles change in gods dropdown  ---
+	const newFilteredGods = this.state.gods.filter(
       god => god.god_type === godType
     );
     godType === "reset"
@@ -235,10 +226,9 @@ updateUser = (updatedUser) => {
       : this.setState({ filteredGods: newFilteredGods });
   };
 
-// --- handles change in stories dropdown ---
-
   storyDropDownChange = storyType => {
-	  if (storyType === "likes" || storyType === "comments") {
+// --- handles change in stories dropdown ---
+	if (storyType === "likes" || storyType === "comments") {
 	const newStorySort = this.state.stories.sort(
 		((a,b) => (a[storyType] < b[storyType] ? 1 : -1 )
 		)

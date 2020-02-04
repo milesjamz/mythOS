@@ -8,8 +8,8 @@ state = {
 	myComments: []
 }
 
-// --- loads all comments --- 
 componentDidMount() {
+// --- loads all comments --- 
 	fetch('http://localhost:3000/api/v1/comments')
 		.then(resp => resp.json())
 		.then(commentList => {
@@ -21,8 +21,8 @@ handleOnChange = (e) => {
 	this.setState({ comment: e.target.value })
 }
 
-// --- adds the new comment ---
 handleOnSubmit = (e) => {
+// --- adds the new comment ---
 	e.preventDefault();
 if (!this.state.comment) { alert("You can't submit an empty comment!") } 
 else
@@ -50,8 +50,8 @@ let newComment = {
 	}
 }
 
-// --- if there are comments on this story, show them --- 
 showComments = () => {
+// --- if there are comments on this story, show them --- 
 	if(this.state.myComments.length > 0) {
 	let theseComments = this.state.myComments.filter(comment => comment.story_id === this.props.story.id );
 	return theseComments.map((comment, index) => {
@@ -67,8 +67,8 @@ showComments = () => {
 	}
 }
 
-// --- delete a comment ---
 delComment = (e) => {
+// --- delete a comment ---
   console.log(e.target.dataset.user)
   if ( parseInt(e.target.dataset.user) === this.props.user.id ) {
   fetch(`http://localhost:3000/api/v1/comments/${e.target.id}`, {
