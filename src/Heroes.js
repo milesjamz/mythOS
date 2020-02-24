@@ -25,8 +25,7 @@ state = {
   };
 
 
-  // <button onClick={this.handleOnClick}>Add a god</button>
-// --- opens a modal to add a god ---
+
 
   handleOnClick = e => {
     e.preventDefault()
@@ -53,7 +52,8 @@ render() {
           value={this.state.searchField}
         />
   <br/>
-
+  <button onClick={this.handleOnClick}>Add a god</button>
+{/* --- opens a modal to add a god --- */}
         <select
           value={this.state.filterType}
           onChange={this.dropdownTypeChange}
