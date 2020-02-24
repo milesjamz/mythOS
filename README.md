@@ -1,4 +1,4 @@
-![mythosdemo](.../mythosone.gif)
+![demo one](./mythosone.gif)
 
 mythOS
 Miles Marillo
