@@ -1,12 +1,16 @@
 ![demo one](./mythosone.gif)
+![demo two](./mythosmap.gif)
+![demo three](./mythosstory.gif)
 
-mythOS
-Miles Marillo
-
-created as my final project for Flatiron School's access labs April-August 2019 cohort
-using React frontend, Rails API
+<h2>mythOS</h2>
+<strong>Miles Marillo</strong>
+<br/>
+mythOS was my final project during my Flatiron School immersive web developement bootcamp.<br/>
+uses React frontend, Rails API<br/>
 additional techs:
--> d3 data visualization
--> google maps api
--> geolocation
--> bCrypt/javascript web tokens for authorization
+<ul>
+  <li> -> d3 data visualization </li>
+  <li> -> google maps api </li>
+  <li> -> geolocation </li>
+  <li> -> bCrypt/javascript web tokens for authorization </li>
+</ul>
