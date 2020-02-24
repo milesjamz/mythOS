@@ -25,6 +25,7 @@ state = {
   };
 
 
+  // <button onClick={this.handleOnClick}>Add a god</button>
 // --- opens a modal to add a god ---
 
   handleOnClick = e => {
@@ -51,9 +52,6 @@ render() {
           handleOnChange={this.handleOnChange}
           value={this.state.searchField}
         />
-
-  <br/>
-        <button onClick={this.handleOnClick}>Add a god</button>
   <br/>
 
         <select
