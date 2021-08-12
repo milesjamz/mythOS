@@ -1,7 +1,6 @@
 
 <h2>mythOS</h2>
 <strong>Miles Marillo</strong>
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=milesjamz&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
 <br/>
 mythOS was my final project during my Flatiron School immersive web developement bootcamp.<br/>
 uses React frontend, Rails API<br/>
